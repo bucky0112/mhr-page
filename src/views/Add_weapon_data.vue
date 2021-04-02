@@ -1,4 +1,6 @@
 <script>
+import { mapActions } from 'vuex';
+
 export default {
   name: 'Add_weapon_data',
   data() {
@@ -7,6 +9,7 @@ export default {
         title: '',
         intro: '',
         img: '',
+        date: '',
         operating: {
           btn_use: '',
           sp_skills: '',
@@ -14,6 +17,14 @@ export default {
         },
       },
     };
+  },
+  methods: {
+    ...mapActions(['addWeapon']),
+    save() {
+      this.weaponData.date = new Date().getTime();
+      this.addWeapon(this.weaponData);
+      this.$router.push('/');
+    },
   },
 };
 </script>
@@ -85,5 +96,8 @@ export default {
         </b-form>
       </b-col>
     </b-row>
+    <b-button @click="save">
+      Save
+    </b-button>
   </b-container>
 </template>
