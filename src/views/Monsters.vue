@@ -1,11 +1,14 @@
 <script>
 export default {
-  name: 'Home',
+  name: 'Monsters',
+  data() {
+    return {};
+  },
 };
 </script>
 
 <template>
   <b-container>
-    <h1>Home</h1>
+    <h1>Monsters</h1>
   </b-container>
 </template>
