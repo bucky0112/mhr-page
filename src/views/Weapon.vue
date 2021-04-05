@@ -19,6 +19,9 @@ export default {
 
 <template>
   <b-container>
-    <h1>{{ weaponData.title }}</h1>
+    <h1 class="text-center">{{ weaponData.title }}</h1>
+    <p>
+      {{ weaponData.intro }}
+    </p>
   </b-container>
 </template>
